@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProfileDetail from "../components/ProfileDetail.astro";
+import ProfileDetailSlot from "../components/ProfileDetailSlot.astro";
+import LinkCard from "../components/LinkCard.astro";
+---
+
+<Layout>
+	<main class="w-full min-h-screen flex justify-center items-center bg-neutral-800 text-white">
+		<div class="rounded-3xl w-full max-w-[820px] flex flex-col bg-background overflow-hidden mx-4 sm:mx-auto">
+			
+			<!-- Banner Section -->
+			<section class="w-full h-48 z-10">
+				<img
+					src="https://i.pinimg.com/736x/f7/ed/ac/f7edac2a781e4b86541cb03c127f68eb.jpg"
+					alt="banner"
+					class="w-full h-full object-cover"
+				/>
+			</section>
+
+			<!-- Profile Content Section -->
+			<section class="mx-16 mb-32">
+				<!-- Avatar and Name Section -->
+				<section class="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center sm:items-start text-center sm:text-left">
+					<div
+						class="-mt-16 w-38 h-38 overflow-hidden rounded-full ring-[10px] ring-background z-20 bg-background"
+					>
+						<img
+							src="https://cdn.discordapp.com/avatars/776176694209413170/7162d99d4515666810e4ecaff62c7bba.png?size=1024"
+							alt="avatar"
+							width="50"
+							height="50"
+							class="w-full h-full object-cover"
+						/>
+					</div>
+					<div class="sm:mt-4 flex flex-col">
+						<h1 class="text-xl sm:text-2xl font-semibold">inferno</h1>
+						<h2 class="text-lg">amxterasus</h2>
+					</div>
+				</section>
+
+				<!-- Profile Info Section -->
+				<div class="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-6 mt-4">
+					<!-- "About Me" Section -->
+					<ProfileDetail title="about me" content="discord.gg/amxterasus" />
+
+					<!-- "Discord Member Since" Section -->
+					<ProfileDetail title="discord member since" content="11 nov 2020" />
+
+					<!-- "Connections" Section -->
+					<ProfileDetailSlot title="connections">
+						<LinkCard
+							platform="github"
+							username="amxterasus"
+							url="https://github.com/amxterasus"
+						/>
+					</ProfileDetailSlot>
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
