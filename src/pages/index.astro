@@ -1,4 +1,7 @@
 ---
+import pfp from '../assets/00.jpg'
+import banner from '../assets/01.jpg'
+
 import Layout from "../layouts/Layout.astro";
 import ProfileDetail from "../components/ProfileDetail.astro";
 import ProfileDetailSlot from "../components/ProfileDetailSlot.astro";
@@ -12,7 +15,7 @@ import LinkCard from "../components/LinkCard.astro";
 			<!-- Banner Section -->
 			<section class="w-full h-48 z-10">
 				<img
-					src="https://i.pinimg.com/736x/f7/ed/ac/f7edac2a781e4b86541cb03c127f68eb.jpg"
+					src={banner.src}
 					alt="banner"
 					class="w-full h-full object-cover"
 				/>
@@ -26,7 +29,7 @@ import LinkCard from "../components/LinkCard.astro";
 						class="-mt-16 w-38 h-38 overflow-hidden rounded-full ring-[10px] ring-background z-20 bg-background"
 					>
 						<img
-							src="https://cdn.discordapp.com/avatars/776176694209413170/7162d99d4515666810e4ecaff62c7bba.png?size=1024"
+							src={pfp.src}
 							alt="avatar"
 							width="50"
 							height="50"
